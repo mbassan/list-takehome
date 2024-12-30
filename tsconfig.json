@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "typeRoots": ["./types", "./node_modules/@types"],
+    "outDir": "./dist",
+    "allowJs": true,
+    "rootDir": ".",
+    "baseUrl": "./src",
+    "lib": ["es5", "es6", "es2015.iterable"],
+    "strict": true,
+    "noImplicitAny": false,
+    "module": "commonjs",
+    "target": "es6",
+    "moduleResolution": "node",
+    "experimentalDecorators": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "./dist"]
+}

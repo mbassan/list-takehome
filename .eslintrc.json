@@ -1,0 +1,87 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "jsx": true,
+    "useJSXTextNode": true,
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "node": true,
+    "commonjs": true
+  },
+  "rules": {
+    "import/extensions": [
+      0,
+      "never",
+      {
+        "ignorePackages": true
+      }
+    ],
+    "no-restricted-syntax": 0,
+    "spaced-comment": ["error", "always"],
+    "eqeqeq": [
+      "error",
+      "always",
+      {
+        "null": "ignore"
+      }
+    ],
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": ["_id"]
+      }
+    ],
+    "camelcase": [
+      "error",
+      {
+        "allow": ["oauth2_v2", "user_id"],
+        "properties": "never"
+      }
+    ],
+    "func-names": ["error", "never"],
+    "consistent-return": "off",
+    "arrow-parens": ["error", "as-needed"],
+    "semi": "off",
+    "@typescript-eslint/semi": ["error"],
+    "no-extra-semi": 0,
+    "import/no-unresolved": ["off"],
+    "import/prefer-default-export": 0,
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars-experimental": "error",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "dot-notation": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error", { "functions": false }],
+    "class-methods-use-this": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "handle-callback-err": "error",
+    "unicorn/no-null": "off",
+    "prettier/prettier": 2, // Means error
+    "unicorn/no-reduce": "off"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts"],
+      "parser": "@typescript-eslint/parser",
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ],
+  "extends": [
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:unicorn/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint" // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+  ],
+  "plugins": ["eslint-plugin-unicorn", "@typescript-eslint", "eslint-plugin-security", "prettier"],
+  "settings": {}
+}
