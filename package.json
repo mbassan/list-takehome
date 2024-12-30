@@ -14,7 +14,7 @@
     "@elastic/ecs-winston-format": "^1.5.3",
     "axios": "^0.27.2",
     "big.js": "^6.2.1",
-    "dotenv": "^16.0.1",
+    "dotenv": "^16.4.7",
     "puppeteer": "^23.11.1",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
