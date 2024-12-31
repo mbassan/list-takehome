@@ -1,1 +1,1 @@
-export * as loginTask from './login-task';
+export * from './login-task';
